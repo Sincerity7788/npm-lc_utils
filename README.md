@@ -22,6 +22,7 @@ yarn add lc_utils
 ```
 1、lc_utils.is_exist // 数组查询指定项
 2、lc_utils.thousands // 为数字或者字符串添加千分位
+3、lc_utils.toJson // 自动转换JSON格式的数据
 ```
 
 #### 功能示例
@@ -71,6 +72,19 @@ let res = lc_utils.thousands(12334.123);
 // res = 12,334.123
 let res = lc_utils.thousands('12334.123');
 // res = 12,334.123
+```
+
+​		2、lc_utils.toJson 自动转换json格式的数据，可以自动检测数据类型，对应转成对象或者json字符串
+
+```js
+// 使用方式
+import lc_utils from 'lc_utils';
+let json = '{"name":"lc"}';
+let res = lc_utils.toJson(json);
+// res = { name: 'lc' };
+let obj = { name: 'lc' };
+res = lc_utils.toJson(obj);
+// res = '{"name":"lc"}'
 ```
 
 

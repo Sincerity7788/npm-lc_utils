@@ -69,4 +69,24 @@ lc_tools.thousands = num => {
   return strArr.join("");
 };
 
+/**
+ * @param {string | Object } json
+ * @return {string | Object } res
+ * */
+lc_tools.toJson = json => {
+  let res = null;
+  try {
+    // 判断当前是什么数据类型
+    if (typeof json === "string") {
+      res = JSON.parse(json);
+    } else {
+      res = JSON.stringify(json);
+    }
+  } catch (e) {
+    console.error(e);
+    return "error";
+  }
+  return res;
+};
+
 export default lc_tools;
