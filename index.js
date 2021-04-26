@@ -47,4 +47,26 @@ lc_tools.is_exist = (arr = [], ele = "", key = "") => {
   return res;
 };
 
+/**
+ * @param { number | string } num
+ * @return { string } res
+ * */
+lc_tools.thousands = num => {
+  let res = "" + num;
+  // 判断当前这个数是否合法
+  if (res !== num * 1 + "") {
+    console.error(new Error("请输入一个合法的数字"));
+    return "error";
+  }
+  let strArr = res.split("");
+  let index = strArr.indexOf(".");
+  index = index === -1 ? strArr.length : index;
+  index -= 3;
+  // 处理整数部分千分位
+  for (; index > 0; index -= 3) {
+    strArr.splice(index, 0, ",");
+  }
+  return strArr.join("");
+};
+
 export default lc_tools;

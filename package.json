@@ -1,7 +1,7 @@
 {
   "name": "lc_utils",
   "version": "1.0.2",
-  "description": "javaScript常用工具，增加了一个文档讲解",
+  "description": "javaScript常用工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

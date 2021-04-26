@@ -17,9 +17,16 @@ yarn add lc_utils
 
 ​		lc_utils这个工具库主要是集成在开发过程中一些比较常见需求，但是实现起来需要一些比较繁琐的代码。比如查找一个数组中指定项。单纯的基础数据类型的数组还好，如果是一个object的数组。匹配起来就比较麻烦一些。
 
-#### 功能
+#### 功能清单
 
-​		is_exist 数组查询指定项
+```
+1、lc_utils.is_exist // 数组查询指定项
+2、lc_utils.thousands // 为数字或者字符串添加千分位
+```
+
+#### 功能示例
+
+​		1、is_exist 数组查询指定项
 
 ```js
 // 使用方式
@@ -54,10 +61,32 @@ let res = lc_utils.is_exist(arr, 4);
 
 ```
 
+​		2、thousands 数字千分位
+
+```js
+// 使用方式
+import lc_utils from 'lc_utils';
+// 参数 number|string
+let res = lc_utils.thousands(12334.123);
+// res = 12,334.123
+let res = lc_utils.thousands('12334.123');
+// res = 12,334.123
+```
+
+
+
 #### 联系方式
 
 ```
 邮箱： dei@live.cn
+公众号： 二哥前端学习之路
 ```
 
 ​		该工具库会持续更新，如果哪里写的不好的，请联系我。或者您有更好的一些思路。以及开发过程中遇到一些适合添加到工具库中的也请您联系我。
+
+#### Npm上的地址
+
+```
+https://www.npmjs.com/package/lc_utils
+```
+
