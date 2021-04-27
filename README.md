@@ -106,7 +106,7 @@ res = lc_utils.getDate('m'); // res = 10
 // 获取秒
 res = lc_utils.getDate('s'); // res = 33
 
-// 参数说明
+// 参数1说明
 Y = 年
 M = 月
 D = 天
@@ -120,6 +120,9 @@ res = lc_utils.getDate('Y/M/D'); // res = 2021/04/27
 res = lc_utils.getDate('Y M D'); // res = 2021 04 27
 res = lc_utils.getDate('Y-M-D h:m:s'); // res = 2021-04-27 11:10:33
 
+// 参数2说明
+res = lc_utils.getDate('Y-M-D', new Date());// res = 2021-04-27
+// 参数二是一个时间对象，或者时间戳或者是正确的时间格式的字符串，可以根据用户传入的不同时间来获取格式化的日期
 ```
 
 
