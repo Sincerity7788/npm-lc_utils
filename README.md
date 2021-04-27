@@ -23,11 +23,12 @@ yarn add lc_utils
 1、lc_utils.is_exist // 数组查询指定项
 2、lc_utils.thousands // 为数字或者字符串添加千分位
 3、lc_utils.toJson // 自动转换JSON格式的数据
+4、lc_utils.getDate // 获取格式化日期
 ```
 
 #### 功能示例
 
-​		1、is_exist 数组查询指定项
+​		1、lc_utils.is_exist 数组查询指定项
 
 ```js
 // 使用方式
@@ -62,7 +63,7 @@ let res = lc_utils.is_exist(arr, 4);
 
 ```
 
-​		2、thousands 数字千分位
+​		2、lc_utils.thousands 数字千分位
 
 ```js
 // 使用方式
@@ -74,7 +75,7 @@ let res = lc_utils.thousands('12334.123');
 // res = 12,334.123
 ```
 
-​		2、lc_utils.toJson 自动转换json格式的数据，可以自动检测数据类型，对应转成对象或者json字符串
+​		3、lc_utils.toJson 自动转换json格式的数据，可以自动检测数据类型，对应转成对象或者json字符串
 
 ```js
 // 使用方式
@@ -85,6 +86,40 @@ let res = lc_utils.toJson(json);
 let obj = { name: 'lc' };
 res = lc_utils.toJson(obj);
 // res = '{"name":"lc"}'
+```
+
+​		4、lc_utils.getDate 获取指定格式的日期字符串，根据不同的格式获取自由组合
+
+```js
+// 使用方式
+import lc_utils from 'lc_utils';
+// 获取年
+let res = lc_utils.getDate('Y');// res = 2021
+// 获取月
+res = lc_utils.getDate('M'); // res = 04
+// 获取日
+res = lc_utils.getDate('D'); // res = 27
+// 获取小时
+res = lc_utils.getDate('h'); // res = 11
+// 获取分钟
+res = lc_utils.getDate('m'); // res = 10
+// 获取秒
+res = lc_utils.getDate('s'); // res = 33
+
+// 参数说明
+Y = 年
+M = 月
+D = 天
+h = 小时
+m = 分钟
+s = 秒数
+// 可以任意自由组合以及连接符
+
+res = lc_utils.getDate('Y-M-D'); // res = 2021-04-27
+res = lc_utils.getDate('Y/M/D'); // res = 2021/04/27
+res = lc_utils.getDate('Y M D'); // res = 2021 04 27
+res = lc_utils.getDate('Y-M-D h:m:s'); // res = 2021-04-27 11:10:33
+
 ```
 
 
